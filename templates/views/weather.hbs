@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {{>header_links}}
+</head>
+<body >
+    <!-- navbar -->
+    {{>navbar}}
+
+    <!-- main header -->
+<div class="container-fluid main_header">
+        <div class="row">
+            <div class="col-md-10 col-12 mx-auto">
+                 <div class="main_content">
+                    <form class="form" action="/weather" method="GET">
+                        <i class="fa fa-search"> </i>
+                        <input type="text" name="cityName" class="form-input" id="cityName" placeholder=" Enter your city name" autocomplete="off">
+                        <br>
+                        <input type="submit" class="btn btn-primary mt-3" value="search" id="submitBtn">
+                    </form>
+                 </div>
+
+                 <div class="tempInfo">
+                    <div class="container mt-2" >
+                        <p id="city_name">{{city}}</p>
+                        <p id="temp"><span>{{temp}}</span> <sup>{{o}}</sup>{{C}}</p>
+                        <p>{{description}}</p>
+                    </div>
+                 </div>
+            </div>        
+        </div>
+    </div>  
+
+    
+
+    <!-- footer code -->
+   {{>footer}}
+
+   <script src="static.js"></script>
+
+
+</body>
+</html>
